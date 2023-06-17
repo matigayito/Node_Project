@@ -6,6 +6,7 @@
     <title>Guia de Hoteles</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  </head>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
   </head>  
 
   <body>
@@ -17,10 +18,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="navbar-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="navbar-item"><a class="nav-link" href="#">Nosotros</a></li>
-          <li class="navbar-item"><a class="nav-link" href="#">Precios</a></li>
-          <li class="navbar-item"><a class="nav-link" href="#">Términos y condiciones</a></li>
-          <li class="navbar-item active"><a class="nav-link" href="#">Contactanos</a></li>
+          <li class="navbar-item"><a class="nav-link" href="about.html">Nosotros</a></li>
+          <li class="navbar-item"><a class="nav-link" href="prices.html">Precios</a></li>
+          <li class="navbar-item"><a class="nav-link" href="terms.html">Términos y condiciones</a></li>
+          <li class="navbar-item active"><a class="nav-link" href="contact.html">Contactanos</a></li>
         </ul>
       </div>
     </nav>
@@ -28,16 +29,60 @@
     <div class="jumbotron">
       <h1>Hoteles</h1>
     </div>
-    <div class="container">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item" aria-current="page"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Contactanos</li>
-            </ol>
-        </nav>
-        <span>Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.
 
-        Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI.1​ Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad. </span>
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item" aria-current="page"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Contactanos</li>
+        </ol>
+      </nav>
+      
+      <h1>Dejanos tu comentario</h1>
+
+      <form>
+        <div class="form-row">
+          <div class="form-col col-sm-6">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+          </div>
+          <div class="form-col col-sm-6">
+            <label for="apellido">Apellido</label>
+            <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col col-sm-12">
+            <label for="mail">Email</label>
+            <input type="text" class="form-control" id="mail" placeholder="Ingrese su correo">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col col-sm-9">
+            <label for="dom">Domicilio</label>
+            <input type="text" class="form-control" id="dom" placeholder="Ingrese su domicilio">
+          </div>
+          <div class="form-col col-sm-3">
+            <label for="provincia">Provincia</label>
+            <select id="provincia" class="form-control">
+              <option selected>Buenos Aires</option>
+              <option>Capital Federal</option>
+              <option>Cordoba</option>
+              <option>Santa Fé</option>
+              <option>Mendoza</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="comment">Dejanos tu comentario</label>
+          <textarea id="comment" class="form-control" rows="10"></textarea>
+        </div>
+        <div class="form-group">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label for="contacted" class="form-check-label">Quiero recibir noticias</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
     </div>
 
     <footer>
@@ -50,6 +95,7 @@
             <h3>
               Cadena de Hoteles "Coursera"
             </h3>
+            <p><span class="oi oi-phone footer-address-icon"></span>+54 12345678</p>
         </address>
         </div>
         <div class="col-sm-4 d-flex flex-column align-items-end">
@@ -62,5 +108,5 @@
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-</body>
+  </body>
 </html>
