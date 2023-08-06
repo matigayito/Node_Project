@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Guia de Hoteles</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
   </head>  
 
@@ -100,7 +100,7 @@
                 <h4 class="card-title">Hotel "Bueno"</h4>
                 <h5 class="card-subtitle text-muted">Mar del Plata</h5>                
                 <p class="card-text">Hotel ubicado en el centro de la ciudad, para que no te pierdas nada!</p>
-                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#contacto"> Contacto</button>
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#contacto" id="contactoBtn"> Contacto</button>
             </div>
             <div> 
               <button class="btn btn-primary btn-reserva">Reserva ya</button>
@@ -203,6 +203,25 @@
         $("[data-toggle='popover']").popover();
         $('.carousel').carousel({
           interval: 100
+        });
+
+        $('#contacto').on('shown.bs.modal', function (e){
+          console.log('se ve el modal')
+          $("#contactoBtn").removeClass('btn-outline-success')
+          $("#contactoBtn").addClass('btn-primary')
+          $("#contactoBtn").prop('disabled', true)
+
+        });$('#contacto').on('show.bs.modal', function (e){
+          console.log('se ve el modal, pero tarda')
+        });
+        $('#contacto').on('hide.bs.modal', function (e){
+          console.log('se oculta el modal')
+          $("#contactoBtn").removeClass('btn-primary')
+          $("#contactoBtn").addClass('btn-outline-success')
+          $("#contactoBtn").prop('disabled', false)
+
+        });$('#contacto').on('hidden.bs.modal', function (e){
+          console.log('se oculta el modal, pero tarda')
         });
       });
     </script>
